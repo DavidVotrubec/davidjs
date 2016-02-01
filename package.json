@@ -1,0 +1,24 @@
+{
+  "name": "davidjs",
+  "version": "1.0.0",
+  "description": "New landing page for David Votrubec",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidVotrubec/davidjs.git"
+  },
+  "keywords": [
+    "Personal",
+    "home",
+    "page"
+  ],
+  "author": "David Votrubec",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/DavidVotrubec/davidjs/issues"
+  },
+  "homepage": "https://github.com/DavidVotrubec/davidjs#readme"
+}
