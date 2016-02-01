@@ -29,3 +29,23 @@
     scrollbar-track-color: $background-color;
   }
 }
+
+@font-face {
+    font-family: 'OpenSansLight'; /*a name to be used later*/
+    src: url('../fonts/OpenSans-Light.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'OpenSansRegular'; /*a name to be used later*/
+    src: url('../fonts/OpenSans-Regular.ttf'); /*URL to font*/
+}
+
+.clearfix {
+  clear: both;
+}
+
+body {
+  background-color: rgb(246, 236, 211);
+  color: rgb(47, 19, 11);
+  
+}

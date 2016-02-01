@@ -91,35 +91,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/*TODO: split to several sass files */
-@font-face {
-    font-family: 'OpenSansLight'; /*a name to be used later*/
-    src: url('../fonts/OpenSans-Light.ttf'); /*URL to font*/
-}
-
-@font-face {
-    font-family: 'OpenSansRegular'; /*a name to be used later*/
-    src: url('../fonts/OpenSans-Regular.ttf'); /*URL to font*/
-}
-
-.clearfix {
-  clear: both;
-}
-
-body {
-  background-color: rgb(246, 236, 211);
-  color: rgb(47, 19, 11);
-  font-family: 'OpenSansLight';
-}
-
-a {
-  color: rgb(47, 19, 11);
-}
-
 /*aligner is based on https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/*/
 .aligner {
   display: flex;
@@ -143,91 +114,11 @@ a {
     font-family: 'OpenFaceRegular'
 }
 
-
-/* Initial screens */
-html, body, .screen, footer {
+html, body {
 	width: 100%;
 	height: 100%;
-	color: rgb(246, 236, 211);
-	background-color: rgb(47, 19, 11);
 }
 
-.screen {
-    height: 100vh;
-}
-
-.vertical-middle {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-}
-
-.screen {
-	overflow: hidden;
-	position: relative;
-}
-
-/* navigation arrows */
-.screen .more:after {
-	background-image: url("../images/arrow.svg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	bottom: 4em;
-	content: '';
-	display: block;
-	height: 1.5em;
-	left: 50%;
-	margin: 0 0 0 -0.75em;
-	position: absolute;
-	width: 1.5em;
-}
-
-.screen .less:after {
-	-moz-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    transform: scaleY(-1);
-    filter: FlipV;
-    -ms-filter: "FlipV";
-
-	top: 4em;
-}
-
-.screen1, .screen2 {
-    color: rgb(246, 236, 211);
-	background-color: rgb(47, 19, 11);
-}
-
-.screen2 .text-content {
-    width: 600px;    
-    font-size: 1.4rem;
-}
-
-.screen1 a, .screen2 a {
-	color: rgb(246, 236, 211);
-}
-
-.screen3 {
-	color: rgb(47, 19, 11);
-	background-color: rgb(246, 236, 211);
-    overflow: visible;
-    height: auto;
-}
-
-
-@media (max-width: 800px) {
-    .screen2 image, .screen2 img {
-        display: none;
-    }
-    
-    .screen2 .text-content {
-        width: 100%;
-        padding: 20px;
-    }
-}
 
 .loading {
     display: block;
