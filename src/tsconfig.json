@@ -1,1 +1,10 @@
-{}
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "out": "./main.js",
+        "sourceMap": true
+    }
+}
