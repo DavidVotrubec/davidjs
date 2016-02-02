@@ -1,4 +1,10 @@
 .main-menu {
+    background-color: darken($backgroundColor, 10%);
+    padding: 1rem;
+    font-size: 1.5rem;
+    
+    @include shadowBottom(black);
+    
     a {
         color: $fontColor;
     }

@@ -30,6 +30,15 @@
   }
 }
 
+@mixin shadowBottom($shadowColor) {    
+    $blurRadius: 5px;
+    $verticalLength: 2px;
+    
+    -webkit-box-shadow: 0px $verticalLength $blurRadius 0px $shadowColor;
+    -moz-box-shadow: 0px $verticalLength $blurRadius 0px $shadowColor;
+    box-shadow: 0px $verticalLength $blurRadius 0px $shadowColor;
+}
+
 @font-face {
     font-family: 'OpenSansLight'; /*a name to be used later*/
     src: url('../fonts/OpenSans-Light.ttf'); /*URL to font*/
