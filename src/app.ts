@@ -2,6 +2,6 @@
 //import typing = require('./simulateTyping');
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    var text = "Hi, I am a Web Developer";
+    var text = "Hi, my name's David and I am a web developer";
     simulateTyping(text, 'greetings');
 });
