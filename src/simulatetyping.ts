@@ -25,4 +25,4 @@ function simulateTyping(textToType: string, elementId: string) {
     } 
 }
 
-module.exports = simulateTyping;
+export = simulateTyping;
