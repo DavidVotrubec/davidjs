@@ -40,16 +40,46 @@ html, body {
 /** EOF - USEFUL HELPER CLASSES */
 
 /** the main block */
+.content {
+    padding-top: 9vh;
+    padding-left: 8vh;
+    
+    > div {
+        vertical-align: top;
+    }
+}
+
 #main {
     background-image: url('/assets/david_2016.jpg');
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
 }
 
 #greetings {
-    font-size: 4rem;
-    padding-top: 9vh;
-    padding-left: 8vh;
+    font-size: 4rem;    
     width: 52vh;
     height: 50vh;
+}
+
+#middlespace {
+    
+}
+
+#skillset {
+    width: 30vw;
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.bottom-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
 }

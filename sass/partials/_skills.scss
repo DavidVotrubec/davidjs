@@ -1,0 +1,44 @@
+/* 
+ Skills Section 
+ Based upon the example http://themes.3rdwavemedia.com/
+ Rewritten to sass
+*/
+.skills {
+     .intro {
+            margin-bottom: 30px;
+     }
+     
+     .skillset {
+        .item {
+            margin-bottom: 30px;
+        }
+        
+        .level-title {
+            font-size: 16px;
+            position: relative;
+            margin-top: 0;
+            margin-bottom: 10;
+            
+            .level-label {
+                color: darken($fontColor, 20%);
+                font-size: 14px;
+                font-weight: 400;
+                font-family: "Lato", arial, sans-serif;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }         
+        
+        .level-bar {
+            height: 15px;
+            background: $skillBackground;
+            border-radius: 3px;
+        }
+        
+        .level-bar-inner {
+            height: 15px;
+            background: $skillColor;
+        }
+     } 
+}
