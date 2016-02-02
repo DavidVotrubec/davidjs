@@ -3,14 +3,24 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var webserver = require('gulp-webserver');
+var ts = require('gulp-typescript');
 
 var config = {
   sassInput: './sass/**/*.scss',
   sassOutput: './public/css',
-  indexFile: './index.html'
+  indexFile: './index.html',
+  tsConfigFile: './src/tsconfig.json',
+  scriptsOutput: './public/js',
 };
 
+// the typescript project needs to be created before the tasks
+var tsProjectOptions = {}; // overwrite default options in the tsconfig.json
+var tsProject = ts.createProject(config.tsConfigFile, tsProjectOptions);
+
+
+///////////////////////////////////
 // The default task. Obviously :)
+///////////////////////////////////
 gulp.task('default', ['sass', 'sass:watch', 'serve']);
 
 gulp.task('sass', function(){
@@ -21,6 +31,14 @@ gulp.task('sass', function(){
         .src(config.sassInput)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(config.sassOutput));
+});
+
+gulp.task('typescript', function() {
+    // based on task in https://www.npmjs.com/package/gulp-typescript
+    var tsResult = tsProject.src() // instead of gulp.src()
+                   .pipe(ts(tsProject));
+                   
+    return tsResult.js.pipe(gulp.dest(config.scriptsOutput));
 });
 
 // Serve static files via gulp-server
