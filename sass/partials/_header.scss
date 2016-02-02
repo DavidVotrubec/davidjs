@@ -1,11 +1,21 @@
 .main-menu {
+    $defaultPadding: 0.6rem;
+    
     background-color: darken($backgroundColor, 10%);
-    padding: 1rem;
-    font-size: 1.5rem;
+    padding: $defaultPadding;
+    font-size: 1.2rem;
     
     @include shadowBottom(black);
     
     a {
         color: $fontColor;
+        text-decoration: none;
+        display: inline-block;
+        padding: $defaultPadding;
+        margin-top: -$defaultPadding;
+    }
+    
+    a:hover {
+        background-color: darken($backgroundColor, 20%);
     }
 }
