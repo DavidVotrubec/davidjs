@@ -6,6 +6,7 @@ var webserver = require('gulp-webserver');
 var ts = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
+var browserSync = require('browser-sync').create();
 
 var browserify = require('browserify');
 var tsify = require('tsify');
