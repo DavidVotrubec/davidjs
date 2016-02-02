@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var webserver = require('gulp-webserver');
@@ -9,7 +11,7 @@ var config = {
 };
 
 // The default task. Obviously :)
-gulp.task('default', ['sass', 'serve']);
+gulp.task('default', ['sass', 'sass:watch', 'serve']);
 
 gulp.task('sass', function(){
     // Find all .scss files in the input directory
@@ -17,7 +19,7 @@ gulp.task('sass', function(){
     // and move the output to the output folder
     return gulp
         .src(config.sassInput)
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(config.sassOutput));
 });
 
@@ -28,4 +30,10 @@ gulp.task('serve', [], function(){
         .pipe(webserver({
             livereload: true
         }))    
+});
+
+// watch sass files for changes
+// then trigger livereload
+gulp.task('sass:watch', function(){
+   gulp.watch(config.sassInput, ['sass']); 
 });
