@@ -127,6 +127,7 @@ html, body {
     font-size: 4rem;    
     width: 52vh;
     font-weight: bold;
+    text-shadow: 4px 4px 2px rgb(51, 49, 49);;
 }
 
 #skillset {
@@ -147,7 +148,6 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100vw;
-    padding: 20px;
 }
 
 @media(max-width: $bp_skillset_is_below) {

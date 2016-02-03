@@ -8,11 +8,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     simulateTyping(text, 'greetings').then(() => {
         
         var skillSet = document.getElementById('skillset'),
-            shortBio = document.getElementById('short-bio');
+            shortBio = document.getElementById('short-bio'),
+            skillsetWrapper = document.getElementsByClassName('skills-wrapper')[0];
         
         // TODO: Perform some CSS animations
         removeClass(skillSet, 'visuallyhidden');
-        removeClass(shortBio, 'visuallyhidden');        
+        removeClass(shortBio, 'visuallyhidden');
+        
+        if (skillsetWrapper) {
+            removeClass(skillsetWrapper, 'visuallyhidden');    
+        }
+        
     });
     
 });

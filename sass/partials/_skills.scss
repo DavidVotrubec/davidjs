@@ -3,11 +3,15 @@
  Based upon the example http://themes.3rdwavemedia.com/
  Rewritten to sass
 */
+
+$skillsMargin: 57px;
+
 .skills {
     padding-right: 33px;
     
-     .intro {
-            margin-bottom: 30px;
+     .header {
+        margin-bottom: 30px;
+        width: 27vw;
      }
      
      .skillset {
@@ -43,4 +47,25 @@
             background: $skillColor;
         }
      } 
+}
+
+@media(max-width: $bp_skillset_is_below) {
+   .skills-wrapper {
+        width: 100vw;
+        background-color: #272D3F;
+        display: block;
+        margin-left: -$skillsMargin; /* override the padding from the main container otherwise the initial background image is visible */
+        padding-left: $skillsMargin;        
+           
+        .header {
+            font-size: 2.2rem;            
+            background-color: #FF983C;            
+            text-shadow: 1px 1px 1px rgb(51, 49, 49);
+            margin-top: 15px;
+            padding: 15px;
+            margin-left: -$skillsMargin; /* override the padding from the main container otherwise the initial background image is visible */
+            padding-left: $skillsMargin;
+            @include shadowBottom(black);
+        } 
+   }
 }
