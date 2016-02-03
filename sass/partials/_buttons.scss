@@ -1,4 +1,4 @@
-/* taken from http://codepen.io/benague/pen/bCkyr */
+/* based upon example in http://codepen.io/benague/pen/bCkyr */
 .btn {
   border-radius: 5px;
   padding: 15px 25px;
@@ -8,6 +8,12 @@
   color: #fff;
   position: relative;
   display: inline-block;
+}
+
+.btn.smaller {
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 10px;
 }
 
 .btn:active {

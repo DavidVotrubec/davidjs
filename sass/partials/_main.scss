@@ -1,3 +1,6 @@
+/* define breakpoints for various scenarios */
+$bp_skillset_is_below: 1100px;
+
 /// custom scrollbars for whole body (and all its children)
 @include scrollbars(.5em, lighten($backgroundColor, 30));
 
@@ -90,6 +93,12 @@ html, body {
     }   
 }
 
+@media(max-width: 800px) {
+    #main {
+        background-image: url('/assets/david_800px_2016.jpg');
+    }   
+}
+
 @media(max-width: 600px) {
     #main {
         background-image: url('/assets/david_600px_2016.jpg');
@@ -102,25 +111,52 @@ html, body {
     }   
 }
 
+.greetings-wrapper {
+    float: left;
+}
+
 #greetings {
     font-size: 4rem;    
     width: 52vh;
 }
 
 #skillset {
-    width: 30vw;
+    width: 27vw;
     float: right;
+    
+    .intro {
+        font-size: 1.3rem;
+    }
 }
 
-@media(max-width: 1400px) {
+.show-skillset-bar {
+    display: none;
+    
+    background-color: $footerBackground;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 20px;
+}
+
+@media(max-width: $bp_skillset_is_below) {
+    .greetings-wrapper {
+        float: none;
+        width: 100vw;
+    }
+    
     /* 
         On smaller screens the skillset wont be immediatelly visible
-        They will be below the critical css line
         There is no need for floating then...
      */
     #skillset {
         float: none;
     }   
+    
+    .show-skillset-bar {
+        display: block;        
+    }
 }
 
 #short-bio {

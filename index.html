@@ -7,9 +7,11 @@
 <meta charset="utf-8">
 <meta name="description" content="Personal home page of web developer (C#, Typescript, Javascript, AngularJs, Css, Sass, Entity Framework, Gulp, Git)" />
 
+<link rel="stylesheet" href="public/css/main.css"/>
+
 <!-- Link to Google fonts -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="public/css/main.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <!-- Promises polyfill -->
 <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
@@ -21,9 +23,16 @@
     <nav class="main-menu top-header">
         <strong>David Votrubec</strong>
 
-        <div class="pull-right">        
-            <a href="">Blog</a>
+        <div class="pull-right links">
+            <a href="https://davidjs.com">
+                <i class="fa fa-rss"></i>
+                Blog
+            </a>
             <a href="">Work</a>
+            <a href="https://github.com/DavidVotrubec">
+                <i class="fa fa-github"></i>
+                Github
+            </a>
             <a href="">CV</a>
         <div>
             
@@ -49,7 +58,8 @@
         </div>
         
         <div id="skillset" class="skills inline-block visuallyhidden">
-            <div class="intro">This is my skillset</div>
+            <a name="skills"></a>
+            <div class="intro">My skills and areas of expertise</div>
             
             <div class="skillset">
                                
@@ -99,6 +109,13 @@
           </div>  <!-- //content -->
             
         </div>
+    </div>
+    
+    <div class="show-skillset-bar">
+        <a href="#skills" class="btn smaller orange">
+            <i class="fa fa-arrow-down"></i>
+            Scroll to skills
+        </a>
     </div>
     
     <script type="text/javascript" src="public/js/main.js"></script>

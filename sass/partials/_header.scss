@@ -26,3 +26,10 @@
   left: 0;
   width: 100%;
 }
+
+.main-menu.top-header {
+    .links {
+        /* fix weird behaviour when both classes are combined */
+        padding-right: 30px;    
+    }    
+}
