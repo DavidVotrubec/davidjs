@@ -54,7 +54,7 @@ html, body {
 }
 
 #main {
-    background-image: url('/assets/david_1800px_2016.jpg');    
+    background-image: url('/assets/david_1400px_2016.jpg');    
     background-size: cover;    
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -62,27 +62,31 @@ html, body {
     width: 100vw;
 }
 
-@media(max-width: 1800px) {
-    #main {
-        background-image: url('/assets/david_1800px_2016.jpg');
-    }   
-}
-
-@media(max-width: 1600px) {
-    #main {
-        background-image: url('/assets/david_1600px_2016.jpg');
-    }   
-}
+// @media(max-width: 1800px) {
+//     #main {
+//         background-image: url('/assets/david_1600px_2016.jpg');
+//         width: 100vw;
+//     }   
+// }
+// 
+// @media(max-width: 1600px) {
+//     #main {
+//         background-image: url('/assets/david_1600px_2016.jpg');
+//         width: 100vw;
+//     }   
+// }
 
 @media(max-width: 1400px) {
     #main {
         background-image: url('/assets/david_1400px_2016.jpg');
+        width: 100vw;
     }   
 }
 
 @media(max-width: 1000px) {
     #main {
         background-image: url('/assets/david_1000px_2016.jpg');
+        width: 100vw;
     }   
 }
 
@@ -101,15 +105,35 @@ html, body {
 #greetings {
     font-size: 4rem;    
     width: 52vh;
-    height: 50vh;
-}
-
-#middlespace {
-    
 }
 
 #skillset {
     width: 30vw;
+    float: right;
+}
+
+@media(max-width: 1400px) {
+    /* 
+        On smaller screens the skillset wont be immediatelly visible
+        They will be below the critical css line
+        There is no need for floating then...
+     */
+    #skillset {
+        float: none;
+    }   
+}
+
+#short-bio {
+    width: 450px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+@media(max-width: 700px) {
+    #short-bio {
+        width: auto;
+        padding-right: 45px;
+    }   
 }
 
 .top-header {
