@@ -1,5 +1,5 @@
-/* define breakpoints for various scenarios */
-$bp_skillset_is_below: 1100px;
+// white space between header toolbar and main content
+$initial_white_space: 30px;
 
 /// custom scrollbars for whole body (and all its children)
 @include scrollbars(.5em, lighten($backgroundColor, 30));
@@ -63,6 +63,13 @@ html, body {
     background-attachment: fixed;
     height: 100vh;
     width: 100vw;
+    background-position-y: -40px;
+}
+
+@media(max-width: 1400px) {
+    #main {
+        background-position-y: 0px;
+    }
 }
 
 // @media(max-width: 1800px) {
@@ -113,16 +120,19 @@ html, body {
 
 .greetings-wrapper {
     float: left;
+    margin-top: $initial_white_space;
 }
 
 #greetings {
     font-size: 4rem;    
     width: 52vh;
+    font-weight: bold;
 }
 
 #skillset {
     width: 27vw;
     float: right;
+    margin-top: $initial_white_space;
     
     .intro {
         font-size: 1.3rem;

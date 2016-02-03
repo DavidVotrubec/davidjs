@@ -1,19 +1,34 @@
 /* based upon example in http://codepen.io/benague/pen/bCkyr */
-.btn {
-  border-radius: 5px;
+@mixin bigButton(){
   padding: 15px 25px;
   font-size: 22px;
-  text-decoration: none;
-  margin: 20px;
-  color: #fff;
-  position: relative;
-  display: inline-block;
+  margin: 20px;  
 }
 
-.btn.smaller {
+@mixin smallerButton() {
     padding: 10px 15px;
     font-size: 15px;
     margin: 10px;
+}
+
+.btn {
+  border-radius: 5px;
+  text-decoration: none;  
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  
+  @include bigButton();
+}
+
+@media(max-width: $bp_skillset_is_below){
+    .btn {
+        @include smallerButton();    
+    }
+}
+
+.btn.smaller {
+    @include smallerButton();
 }
 
 .btn:active {
