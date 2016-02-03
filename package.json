@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/DavidVotrubec/davidjs#readme",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",

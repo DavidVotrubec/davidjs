@@ -6,7 +6,6 @@ var webserver = require('gulp-webserver');
 var ts = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
-var browserSync = require('browser-sync').create();
 
 var browserify = require('browserify');
 var tsify = require('tsify');
@@ -45,7 +44,7 @@ gulp.task('typescript', function() {
                        .pipe(sourcemaps.init()) // This means sourcemaps will be generated
                        .pipe(ts({
                            sortOutput: true,
-                           noImplicitAny: true,
+                           noImplicitAny: false,
                            module: 'commonjs',
                            out: config.scriptsOutputFile
                        }));
