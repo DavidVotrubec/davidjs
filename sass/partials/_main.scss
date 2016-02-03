@@ -54,10 +54,48 @@ html, body {
 }
 
 #main {
-    background-image: url('/assets/david_2016.jpg');
+    background-image: url('/assets/david_1800px_2016.jpg');    
+    background-size: cover;    
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
+    width: 100vw;
+}
+
+@media(max-width: 1800px) {
+    #main {
+        background-image: url('/assets/david_1800px_2016.jpg');
+    }   
+}
+
+@media(max-width: 1600px) {
+    #main {
+        background-image: url('/assets/david_1600px_2016.jpg');
+    }   
+}
+
+@media(max-width: 1400px) {
+    #main {
+        background-image: url('/assets/david_1400px_2016.jpg');
+    }   
+}
+
+@media(max-width: 1000px) {
+    #main {
+        background-image: url('/assets/david_1000px_2016.jpg');
+    }   
+}
+
+@media(max-width: 600px) {
+    #main {
+        background-image: url('/assets/david_600px_2016.jpg');
+    }   
+}
+
+@media(max-width: 400px) {
+    #main {
+        background-image: url('/assets/david_400px_2016.jpg');
+    }   
 }
 
 #greetings {
