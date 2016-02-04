@@ -6,6 +6,39 @@
 
 $skillsMargin: 57px;
 
+#skillset {    
+    width: 27vw;
+}
+
+@media(max-width: 1000px) {    
+    #skillset {    
+        width: 40vw;
+    }
+}
+
+@media(max-width: 750px) {    
+    #skillset {    
+        width: 50vw;
+    }
+}
+
+@media(max-width: 640px) {    
+    #skillset {    
+        width: 84vw;
+    }
+}
+
+@media(max-width: 430px) {    
+    #skillset {    
+        width: 70vw;
+    }
+}
+
+@media(max-width: 340px) {    
+    #skillset .level-label {    
+        display: none;
+    }
+}
 .skills {
     padding-right: 33px;
          
