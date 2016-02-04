@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
         if (skillsetWrapper) {
             removeClass(skillsetWrapper, 'visuallyhidden');    
+            
+            animateProgressBars(skillSet);
         }
         
     });

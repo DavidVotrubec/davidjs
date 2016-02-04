@@ -52,6 +52,8 @@ $skillsMargin: 57px;
         .level-bar-inner {
             height: 15px;
             background: $skillColor;
+            border-radius: 3px;
+            width: 0%; /* will be increased dynamically via script */
         }
      } 
 }
