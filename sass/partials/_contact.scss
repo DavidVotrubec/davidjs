@@ -1,9 +1,21 @@
 .contact {
+    
    .header {       
        @include header($contactHeaderBackground);
    }
    
    form {
-       margin-top: $initial_white_space;
+       margin-top: $initial_white_space;    
+       width: 40vw;
+       
+       textarea {
+           height: 300px;
+       }
    }
+}
+
+@media(max-width: $bp_skillset_is_below){
+    .contact form {
+        width: 90vw;
+    }
 }
