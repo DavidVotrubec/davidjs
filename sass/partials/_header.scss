@@ -1,12 +1,17 @@
+$mainMenuLeftMargin: 48px;
+
 .main-menu {
     $defaultPadding: 0.6rem;
     
     background-color: darken($backgroundColor, 10%);
     padding: $defaultPadding;
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem;    
     @include shadowBottom(black);
-    
+     
+    .authorname {
+        margin-left: $mainMenuLeftMargin;
+    }    
+
     a {
         color: $fontColor;
         text-decoration: none;
@@ -31,6 +36,19 @@
 .main-menu.top-header {
     .links {
         /* fix weird behaviour when both classes are combined */
-        padding-right: 30px;    
+        padding-right: 30px;   
+    }    
+}
+
+@media(max-width: 650px) {
+    .main-menu.top-header .links .text {
+        display: none;   
+    }    
+}
+
+@media(max-width: 420px) {
+    .main-menu.top-header .links.pull-right {
+        float: none;
+        margin-left: $mainMenuLeftMargin;
     }    
 }
