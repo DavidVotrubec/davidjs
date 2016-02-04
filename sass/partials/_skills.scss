@@ -8,13 +8,20 @@ $skillsMargin: 57px;
 
 .skills {
     padding-right: 33px;
-    
-     .header {
+         
+    .header {
         margin-bottom: 30px;
         width: 27vw;
-     }
-     
+    }
+    
+    .header.show-on-small-screen {
+        font-weight: bold;
+        font-size: 2rem;        
+        @include smallTextShadow();
+    }
+         
      .skillset {
+                  
         .item {
             margin-bottom: 30px;
         }

@@ -49,12 +49,14 @@
     src: url('../fonts/OpenSans-Regular.ttf'); /*URL to font*/
 }
 
-.clearfix {
-  clear: both;
+@mixin textShadow {
+    text-shadow: 4px 4px 2px #333131;
 }
 
-body {
-  background-color: rgb(246, 236, 211);
-  color: rgb(47, 19, 11);
-  
+@mixin smallTextShadow {
+    text-shadow: 1px 1px 2px #333131;
+}
+
+.clearfix {
+  clear: both;
 }

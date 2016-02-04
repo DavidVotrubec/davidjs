@@ -34,8 +34,8 @@
             domElement.innerHTML = domElement.innerHTML + (char || '');
             
             currentCharIndex ++;
-            var rand = Math.floor(Math.random() * (100)) + 140;
-            //var rand = 1;
+            //var rand = Math.floor(Math.random() * (100)) + 140;
+            var rand = 1;
             timeout = setTimeout(() => typeChar(onSuccessFn, onErrorfn), rand);
         } 
         
