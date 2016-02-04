@@ -1,0 +1,9 @@
+.contact {
+   .header {       
+       @include header($contactHeaderBackground);
+   }
+   
+   form {
+       margin-top: $initial_white_space;
+   }
+}

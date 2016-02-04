@@ -1,6 +1,3 @@
-// white space between header toolbar and main content
-$initial_white_space: 30px;
-
 /// custom scrollbars for whole body (and all its children)
 @include scrollbars(.5em, lighten($backgroundColor, 30));
 

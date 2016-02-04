@@ -3,12 +3,14 @@
   padding: 15px 25px;
   font-size: 22px;
   margin: 20px;  
+  border-width: 0;
 }
 
 @mixin smallerButton() {
     padding: 10px 15px;
     font-size: 15px;
     margin: 10px;
+    border-width: 0;
 }
 
 .buttons .btn.first {

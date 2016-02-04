@@ -100,14 +100,7 @@ $skillsMargin: 57px;
         padding-left: $skillsMargin;        
            
         .header {
-            font-size: 2.2rem;            
-            background-color: #FF983C;            
-            text-shadow: 1px 1px 1px rgb(51, 49, 49);
-            margin-top: 15px;
-            padding: 15px;
-            margin-left: -$skillsMargin; /* override the padding from the main container otherwise the initial background image is visible */
-            padding-left: $skillsMargin;
-            @include shadowBottom(black);
+            @include header(#FF983C);
         } 
    }
 }
