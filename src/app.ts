@@ -26,3 +26,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     
 });
+
+function goToContact() {
+    const messageBox = document.getElementById('message');
+    setTimeout(function() {
+        messageBox.focus();    
+    }, 250);    
+}
+
+function sendMessage() {
+    const form = document.getElementsByName('contactForm')[0];
+    const name = form['name'], email = form['email'], message = form['message'];
+    
+    // basic validation
+    if (!name.value || !email.value || !message.value){
+        alert('Please fill all fields.');
+        return;
+    }
+}
