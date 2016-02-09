@@ -41,3 +41,16 @@ input:disabled, textarea:disabled, select:disabled {
     background-color: #909090;
     border-color: #666464
 } 
+
+.message {
+    padding: 15px;    
+    margin-bottom: 15px;
+}
+
+.error-message {
+    background-color: orangered; 
+}
+
+.success-message {
+    background-color: #6FB406;
+}

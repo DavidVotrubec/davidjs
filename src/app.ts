@@ -74,5 +74,17 @@ function sendMessage() {
         fields.forEach((field: HTMLElement) => {
             field.removeAttribute('disabled');
         });
+        
+        // show status message
+        const status = (<any>xmlEvent.currentTarget).status;
+        var statusMessage; 
+        if (status != 200) {
+            statusMessage = form.getElementsByClassName('error-message')[0];
+        }
+        else {
+            statusMessage = form.getElementsByClassName('success-message')[0];
+        }
+        
+        removeClass(statusMessage, 'hidden');
     }
 }
