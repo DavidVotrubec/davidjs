@@ -10,12 +10,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var skillSet = document.getElementById('skillset'),
             shortBio = document.getElementById('short-bio'),
             contact = document.getElementById('contact'),
+            work = document.getElementById('work'),
             skillsetWrapper = document.getElementsByClassName('skills-wrapper')[0];
         
         // TODO: Perform some CSS animations
-        removeClass(skillSet, 'visuallyhidden');
-        removeClass(shortBio, 'visuallyhidden');
-        removeClass(contact, 'visuallyhidden');
+        [skillSet, shortBio, contact, work].forEach((domElement) => {
+           removeClass(domElement, 'visuallyhidden'); 
+        });
         
         if (skillsetWrapper) {
             removeClass(skillsetWrapper, 'visuallyhidden');    

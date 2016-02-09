@@ -7,6 +7,11 @@ html, body {
     color: $fontColor;
 }
 
+a.link, .content a.link {
+    color: #FF983C;
+    font-weight: bold;
+}
+
 /** USEFUL HELPER CLASSES */
 .clearfix {
     clear: both;
