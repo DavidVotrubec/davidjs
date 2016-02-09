@@ -57,8 +57,10 @@ function sendMessage() {
     };
     
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-    xmlhttp.open("POST", "/json-handler");
-    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.open("POST", "/sendemail.php");
+    xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    //xmlhttp.setRequestHeader("Content-Type", "multipart/form-data");
+    
     xmlhttp.send(JSON.stringify(dataToSend));
     
     // disable form fields when request is sent
@@ -77,14 +79,18 @@ function sendMessage() {
         
         // show status message
         const status = (<any>xmlEvent.currentTarget).status;
-        var statusMessage; 
+        var statusMessage, theOtherMessage;
+        
         if (status != 200) {
             statusMessage = form.getElementsByClassName('error-message')[0];
+            theOtherMessage = form.getElementsByClassName('success-message')[0];
         }
         else {
             statusMessage = form.getElementsByClassName('success-message')[0];
+            theOtherMessage = form.getElementsByClassName('error-message')[0];
         }
         
         removeClass(statusMessage, 'hidden');
+        addClass(theOtherMessage, 'hidden');
     }
 }

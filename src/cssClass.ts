@@ -11,6 +11,37 @@ function getClass( elem ) {
     return elem.getAttribute && elem.getAttribute( "class" ) || "";
 }
 
+function addClass(elem, value ) {
+    var classes, cur, curValue, clazz, j, finalValue,
+        i = 0;
+
+    if ( typeof value === "string" && value ) {
+        classes = value.match( rnotwhite ) || [];
+
+        while ( ( elem = this[ i++ ] ) ) {
+            curValue = getClass( elem );
+            cur = elem.nodeType === 1 &&
+                ( " " + curValue + " " ).replace( rclass, " " );
+
+            if ( cur ) {
+                j = 0;
+                while ( ( clazz = classes[ j++ ] ) ) {
+                    if ( cur.indexOf( " " + clazz + " " ) < 0 ) {
+                        cur += clazz + " ";
+                    }
+                }
+
+                // only assign if different to avoid unneeded rendering.
+                finalValue = trim( cur );
+                if ( curValue !== finalValue ) {
+                    elem.setAttribute( "class", finalValue );
+                }
+            }
+        }
+    }
+};
+
+
 function removeClass( elem, value ) {
     var classes, cur, curValue, clazz, j, finalValue, i = 0;
 
