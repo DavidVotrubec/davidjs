@@ -36,3 +36,8 @@ textarea {
     width: 600px;
     height: 300px;
 }
+
+input:disabled, textarea:disabled, select:disabled {
+    background-color: #909090;
+    border-color: #666464
+} 
