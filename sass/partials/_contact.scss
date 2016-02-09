@@ -1,5 +1,7 @@
 .contact {
     
+   background-color: $backgroundColor;
+    
    .header {       
        @include header($contactHeaderBackground);
    }

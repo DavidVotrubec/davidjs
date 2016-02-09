@@ -130,6 +130,7 @@ html, body {
 .greetings-wrapper {
     float: left;
     margin-top: $initial_white_space;
+    min-height: 78vh;
 }
 
 #greetings {
