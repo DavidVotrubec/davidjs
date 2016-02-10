@@ -206,10 +206,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /** Kindle Fire Portrait **/
 @media only screen and (min-device-width : 1600px) and (max-device-width: 2560px) and (orientation : portrait) {
-
-    html, body {
-        font-size: x-large;
-    }    
     
     #main {
         background-position-x: -1158px;
@@ -219,7 +215,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /** Blackberry Playbook */
 @media only screen and (min-device-width : 600px) and (max-device-width: 1024px) and (orientation : portrait) {    
     #main {
-        background-position-x: -900px;
+        background-position-x: -450px;
     }
 }
 
