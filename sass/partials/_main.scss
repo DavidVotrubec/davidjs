@@ -216,6 +216,27 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+/** Blackberry Playbook */
+@media only screen and (min-device-width : 600px) and (max-device-width: 1024px) and (orientation : portrait) {    
+    #main {
+        background-position-x: -900px;
+    }
+}
+
+/** LG Optimus */
+@media only screen and (min-device-width : 384px) and (max-device-width: 640px) and (orientation : portrait) {    
+    #main {
+        background-position-x: -850px;
+    }
+}
+
+/** Nokia Lumia 520 */
+@media only screen and (min-device-width : 320px) and (max-device-width: 533px) and (orientation : portrait) {    
+    #main {
+        background-position-x: -850px;
+    }
+}
+
 .greetings-wrapper {
     float: left;
     margin-top: $initial_white_space;
