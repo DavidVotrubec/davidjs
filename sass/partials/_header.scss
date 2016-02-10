@@ -7,9 +7,13 @@ $mainMenuLeftMargin: 48px;
     padding: $defaultPadding;
     font-size: 1.2rem;    
     @include shadowBottom(black);
+    
+    .fa {
+        margin-left: 20px;
+    }
      
     .authorname {
-        margin-left: $mainMenuLeftMargin;
+        margin-left: 24px;
     }    
 
     a {
