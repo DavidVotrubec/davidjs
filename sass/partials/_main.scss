@@ -132,6 +132,52 @@ a.link, .content a.link {
     }   
 }
 
+
+/* Apple IPad in Portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) {    
+    
+    html, body {
+        font-size: x-large;
+    }
+    
+    #main {
+        background-position-x: -444px;
+    }
+}
+
+/* Apple IPhone in Portrait */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) {    
+    
+    html, body {
+        font-size: x-large;
+    }
+    
+    #main {
+        background-position-x: -637px;
+    }
+}
+
+
+/** Kindle Fire Portrait **/
+@media only screen and (min-device-width : 1600px) and (max-device-width: 2560px) and (orientation : portrait) {
+
+    html, body {
+        font-size: x-large;
+    }    
+    
+    #main {
+        background-position-x: -1158px;
+    }
+}
+
 .greetings-wrapper {
     float: left;
     margin-top: $initial_white_space;
@@ -167,7 +213,6 @@ a.link, .content a.link {
 @media(max-width: $bp_skillset_is_below) {
     .greetings-wrapper {
         float: none;
-        // width: 100vw;
     }
     
     /* 
