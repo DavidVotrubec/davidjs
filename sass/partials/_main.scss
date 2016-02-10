@@ -134,7 +134,7 @@ a.link, .content a.link {
 
 /* increase font size for mobile devices */
 body.mobile-device {
-    font-size: 4rem;
+    font-size: 2rem;
     
     #short-bio {
         font-size: 2rem;
@@ -194,7 +194,7 @@ and (max-device-width : 480px)
 and (orientation : portrait)
 and (-webkit-min-device-pixel-ratio: 2) {    
     
-    html, body {
+    html, body.mobile-device, body.tablet-device {
         font-size: x-large;
     }
     
@@ -207,29 +207,37 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /** Kindle Fire Portrait **/
 @media only screen and (min-device-width : 1600px) and (max-device-width: 2560px) and (orientation : portrait) {
     
-    #main {
-        background-position-x: -1158px;
-    }
+    body.mobile-device, body.tablet-device {
+        #main {
+            background-position-x: -1158px;
+        }    
+    }    
 }
 
 /** Blackberry Playbook */
 @media only screen and (min-device-width : 600px) and (max-device-width: 1024px) and (orientation : portrait) {    
-    #main {
-        background-position-x: -450px;
+    body.mobile-device, body.tablet-device {
+        #main {
+            background-position-x: -900px;
+        }    
     }
 }
 
 /** LG Optimus */
 @media only screen and (min-device-width : 384px) and (max-device-width: 640px) and (orientation : portrait) {    
-    #main {
-        background-position-x: -850px;
+    body.mobile-device, body.tablet-device {
+        #main {
+            background-position-x: -850px;
+        }    
     }
 }
 
 /** Nokia Lumia 520 */
 @media only screen and (min-device-width : 320px) and (max-device-width: 533px) and (orientation : portrait) {    
-    #main {
-        background-position-x: -850px;
+    body.mobile-device, body.tablet-device {
+        #main {
+            background-position-x: -850px;
+        }    
     }
 }
 

@@ -3,9 +3,19 @@
 
 document.addEventListener("DOMContentLoaded", function(event) {
     
-    if (mobilecheck) {
+    const isMobile = mobilecheck();
+    const isTablet = mobileAndTabletcheck();
+    
+    if (isMobile || isTablet) {
         const body = document.getElementsByTagName('body')[0];
-        addClass(body, 'mobile-device');
+        
+        if (isMobile) {
+            addClass(body, 'mobile-device');    
+        }
+        
+        if (isTablet) {
+            addClass(body, 'tablet-device');    
+        }        
     }
     
     var text = "Hi, I am a web developer";
