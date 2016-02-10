@@ -8,6 +8,7 @@
    
    .general-description {
         padding: 24px;
+        padding-left: 0;
         font-size: 1.1rem;
    }
    
@@ -28,24 +29,34 @@
        
        .description {
            margin-bottom: 15px;
+           color:rgb(155, 156, 165);
        }
        
        .image {
-           //max-width: 800px;
-           width: 47vw;
+           width: 47%;
+           border-radius: 3px;
        }       
    }
       
     .testimonials {
         font-style: italic;
-        width: 48vw;
-        
+                
         img {
             max-width: 130px;
             float: left;
             margin-right: 15px;
             margin-bottom: 15px;
+            border-radius: 3px;
         }
+        
+        .fa {
+            color: #9b9ca5;
+        }
+    }
+    
+    .testimonials.half {
+        width: 47%;
+        margin-left: 20px;
     }
    
    @media(max-width:800px) {

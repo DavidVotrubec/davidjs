@@ -93,7 +93,6 @@ $skillsMargin: 57px;
 
 @media(max-width: $bp_skillset_is_below) {
    .skills-wrapper {
-        width: 100vw;
         background-color: #272D3F;
         display: block;
         margin-left: -$skillsMargin; /* override the padding from the main container otherwise the initial background image is visible */
