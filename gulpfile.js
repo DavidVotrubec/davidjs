@@ -20,6 +20,7 @@ var config = {
   sassOutput: './public/css',
   indexFile: './index.html',
   scriptsInput: './src/**/*.ts', //same files as refered in tsconfig.json but can be used in gulp.watch
+  javascriptsInput: './src/**/*.js',
   scriptsOutputFolder: './public/js',
   scriptsOutputFile: 'main.js'
 };
@@ -40,7 +41,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('typescript', function() {
-        var tsResult = gulp.src(config.scriptsInput)
+        var tsResult = gulp.src([config.javascriptsInput, config.scriptsInput])
                        .pipe(sourcemaps.init()) // This means sourcemaps will be generated
                        .pipe(ts({
                            sortOutput: true,
