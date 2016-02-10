@@ -2,6 +2,12 @@
 //import typing = require('./simulateTyping');
 
 document.addEventListener("DOMContentLoaded", function(event) {
+    
+    if (mobilecheck) {
+        const body = document.getElementsByTagName('body')[0];
+        addClass(body, 'mobile-device');
+    }
+    
     var text = "Hi, I am a web developer";
     
     // simulateTyping() returns a Promise

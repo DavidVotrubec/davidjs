@@ -132,18 +132,56 @@ a.link, .content a.link {
     }   
 }
 
-
+/* increase font size for mobile devices */
+body.mobile-device {
+    font-size: 4rem;
+    
+    #short-bio {
+        font-size: 2rem;
+    }
+    
+    .header, .skills-wrapper .headers {
+        font-size: 100%;
+    }
+    
+    .general-description {
+        font-size: 70%;
+    }
+    
+    .skills .skillset .more-link {
+        font-size: 40%;
+    }
+    
+    .skills .skillset .level-title {
+        font-size: 50%;
+    }
+    
+    .work {
+        .testimonials {
+            font-size: 70%;
+        }
+        
+        .work-item .image {
+            width: 100vh;
+        } 
+        
+        .testimonials.half {
+            width: 100vh;
+        }
+    }
+    
+    .btn {
+        font-size: 2rem;
+    }   
+}
+    
 /* Apple IPad in Portrait */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait)
 and (-webkit-min-device-pixel-ratio: 2) {    
-    
-    html, body {
-        font-size: x-large;
-    }
-    
+        
     #main {
         background-position-x: -444px;
     }
