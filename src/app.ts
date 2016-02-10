@@ -35,6 +35,11 @@ function goToContact() {
     }, 250);    
 }
 
+function validateEmail(email: string) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 function sendMessage() {
     const form = document.getElementsByName('contactForm')[0];
     const name = form['name'], 
@@ -47,6 +52,11 @@ function sendMessage() {
     // basic validation
     if (!name.value || !email.value || !message.value){
         alert('Please fill all fields.');
+        return;
+    }
+    
+    if (!validateEmail(email.value)){
+        alert('Please enter valid email.');
         return;
     }
     
