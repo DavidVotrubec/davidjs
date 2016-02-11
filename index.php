@@ -255,7 +255,6 @@ I would have no hesitation in recommending David
                             My favourite articles are <a class="link" href="http://waitbutwhy.com/2015/08/how-and-why-spacex-will-colonize-mars.html">How SpaceX is going to colonize Mars</a>
                             and <a class="link" href="http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html">Artificial Intelligence, part I</a> 
                             and <a class="link" href="http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html">part II</a>.
-                            <a class="link" href="http://waitbutwhy.com/2014/09/muhammad-isis-iraqs-full-story.html">From Muhammad to ISIS</a>
                         </article>
                     </li>
                     
@@ -300,8 +299,41 @@ I would have no hesitation in recommending David
         </div>
     </div>
             
-    <!--<script type="text/javascript" src="public/js/main.js" defer></script>-->
     <script type="text/javascript" src="public/js/concat.js" defer></script>
+    
+    <script type="text/javascript">
+    // Redirect user to new blog domain
+        (function redirect() {
+            var url = document.location.href;
+            var years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
+            
+            years.forEach((year) => {
+            if (url.indexOf("/" + year + "/") > 0) {
+                    const protocol = document.location.protocol;
+                    const host = document.location.host;
+                    const articleUrl = document.location.href
+                                        .replace('//' + document.location.host, '')
+                                        .replace(document.location.protocol, '');
+                                        
+                    if (articleUrl) {
+                        const newLocation = protocol + '//' + 'blog.' + host + articleUrl;
+                        document.location.href = newLocation; 
+                    }     
+            } 
+            });
+        })();
+    </script>
+    
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-73650545-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 </body>
 
 </html>
