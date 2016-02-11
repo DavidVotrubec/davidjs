@@ -23,7 +23,7 @@
         <strong class="authorname">David Votrubec</strong>
 
         <div class="pull-right links">
-            <a href="https://davidjs.com">
+            <a href="https://blog.davidjs.com">
                 <i class="fa fa-rss"></i>
                 <span class="text">Blog</span>
             </a>
@@ -63,7 +63,7 @@
                 Want to know more?
                 
                 <div class="buttons inline-block">
-                    <a class="btn orange first" href="http://davidjs.com">Read my blog</a>
+                    <a class="btn orange first" href="http://blog.davidjs.com">Read my blog</a>
                     <a class="btn green" href="#contact" onclick="goToContact();">Get in touch</a>
                 </div>
             </div>
