@@ -296,6 +296,11 @@ I would have no hesitation in recommending David
                 </form>
             </div>
                 
+            <div class="footer visuallyhidden" id="footer">
+                Made with <i class="fa fa-heart love" title="love"></i> by David Votrubec. 
+                See the code on <a href="https://github.com/DavidVotrubec/davidjs">
+                    <i class="fa fa-github"></i>&nbsp;Github</a>
+            </div>
         </div>
     </div>
             
