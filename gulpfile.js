@@ -6,6 +6,7 @@ var webserver = require('gulp-webserver');
 var ts = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
+var naturalSort = require('gulp-natural-sort');
 
 var browserify = require('browserify');
 var tsify = require('tsify');
@@ -28,7 +29,7 @@ var config = {
 ///////////////////////////////////
 // The default task. Obviously :)
 ///////////////////////////////////
-gulp.task('default', ['sass', 'typescript', 'sass:watch', 'serve']);
+gulp.task('default', ['sass', 'js', 'sass:watch', 'serve']);
 
 gulp.task('sass', function(){
     // Find all .scss files in the input directory
@@ -41,7 +42,8 @@ gulp.task('sass', function(){
 });
 
 gulp.task('typescript', function() {
-        var tsResult = gulp.src([config.javascriptsInput, config.scriptsInput])
+        var tsResult = gulp.src(config.scriptsInput)
+                       .pipe(naturalSort())
                        .pipe(sourcemaps.init()) // This means sourcemaps will be generated
                        .pipe(ts({
                            sortOutput: true,
@@ -55,6 +57,14 @@ gulp.task('typescript', function() {
                 .pipe(sourcemaps.write()) // Now the sourcemaps are added to the .js file
                 .pipe(gulp.dest(config.scriptsOutputFolder));
 });
+
+gulp.task('js', ['typescript'], function() {
+  return gulp.src([config.javascriptsInput, config.scriptsOutputFolder + '/' + config.scriptsOutputFile])
+             .pipe(uglify())
+             .pipe(concat('concat.js'))
+             .pipe(gulp.dest(config.scriptsOutputFolder));
+});
+
 // 
 // gulp.task('javascript', function () {
 //   // set up the browserify instance on a task basis
