@@ -99,7 +99,7 @@ $skillsMargin: 57px;
         padding-left: $skillsMargin;        
            
         .header {
-            @include header(#FF983C);
+            @include header($headerBackgroundColor);
         } 
    }
 }
