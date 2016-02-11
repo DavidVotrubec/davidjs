@@ -6,6 +6,30 @@
 <meta name="author" content="David Votrubec">
 <meta charset="utf-8">
 <meta name="description" content="Personal home page of web developer (C#, Typescript, Javascript, AngularJs, Css, Sass, Entity Framework, Gulp, Git)" />
+    
+<script type="text/javascript">
+// Redirect user to new blog domain
+// This is for user who access my articles via old domain
+    (function redirect() {
+        var url = document.location.href;
+        var years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
+        
+        years.forEach((year) => {
+        if (url.indexOf("/" + year + "/") > 0) {
+                const protocol = document.location.protocol;
+                const host = document.location.host;
+                const articleUrl = document.location.href
+                                    .replace('//' + document.location.host, '')
+                                    .replace(document.location.protocol, '');
+                                    
+                if (articleUrl) {
+                    const newLocation = protocol + '//' + 'blog.' + host + articleUrl;
+                    document.location.href = newLocation; 
+                }     
+        } 
+        });
+    })();
+</script>
 
 <link rel="stylesheet" href="public/css/main.css"/>
 <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
@@ -305,29 +329,6 @@ I would have no hesitation in recommending David
     </div>
             
     <script type="text/javascript" src="public/js/concat.js" defer></script>
-    
-    <script type="text/javascript">
-    // Redirect user to new blog domain
-        (function redirect() {
-            var url = document.location.href;
-            var years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
-            
-            years.forEach((year) => {
-            if (url.indexOf("/" + year + "/") > 0) {
-                    const protocol = document.location.protocol;
-                    const host = document.location.host;
-                    const articleUrl = document.location.href
-                                        .replace('//' + document.location.host, '')
-                                        .replace(document.location.protocol, '');
-                                        
-                    if (articleUrl) {
-                        const newLocation = protocol + '//' + 'blog.' + host + articleUrl;
-                        document.location.href = newLocation; 
-                    }     
-            } 
-            });
-        })();
-    </script>
     
     <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
