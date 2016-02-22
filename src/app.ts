@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             contact = document.getElementById('contact'),
             work = document.getElementById('work'),
             books = document.getElementById('books'),
+            blogposts = document.getElementById('blogposts'),
             footer = document.getElementById('footer'),
             skillsetWrapper = document.getElementsByClassName('skills-wrapper')[0];
-        
-        // TODO: Perform some CSS animations
-        [skillSet, shortBio, contact, work, books, footer].forEach((domElement) => {
+                
+        [skillSet, shortBio, contact, work, books, blogposts, footer].forEach((domElement) => {
            removeClass(domElement, 'visuallyhidden'); 
         });
         

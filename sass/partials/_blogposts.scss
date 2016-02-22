@@ -1,0 +1,13 @@
+.blogposts {
+    background-color: $backgroundColor;
+    margin-top: 35px;
+
+    .header {       
+        // @include header($headerBackgroundColor);
+        @include header(red)
+    }
+    
+    .description {
+        margin: 20px 0px;
+    }
+}
