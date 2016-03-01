@@ -1,3 +1,22 @@
+<?php
+$currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+$arr = array(2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016);
+foreach ($arr as &$year) {
+
+if (stripos($currentUrl, strval($year)) !== FALSE) {
+    // request to old blog article
+    // redirect user to new url
+    // This is hard-wired for davidjs.com.
+    // I do not know PHP and I find it ugly language :)
+    $newUrl = str_replace("davidjs.com", "blog.davidjs.com", $currentUrl);
+    
+    header("Location: ".$newUrl);
+    die();
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,30 +26,6 @@
 <meta charset="utf-8">
 <meta name="description" content="Personal home page of web developer (C#, Typescript, Javascript, AngularJs, Css, Sass, Entity Framework, Gulp, Git)" />
     
-<script type="text/javascript">
-// Redirect user to new blog domain
-// This is for user who access my articles via old domain
-    (function redirect() {
-        var url = document.location.href;
-        var years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016];
-        
-        years.forEach((year) => {
-        if (url.indexOf("/" + year + "/") > 0) {
-                var protocol = document.location.protocol;
-                var host = document.location.host;
-                var articleUrl = document.location.href
-                                    .replace('//' + document.location.host, '')
-                                    .replace(document.location.protocol, '');
-                                    
-                if (articleUrl) {
-                    var newLocation = protocol + '//' + 'blog.' + host + articleUrl;
-                    document.location.href = newLocation; 
-                }     
-        } 
-        });
-    })();
-</script>
-
 <link rel="stylesheet" href="public/css/main.css"/>
 <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
@@ -51,7 +46,7 @@
                 <i class="fa fa-rss"></i>
                 <span class="text">Blog</span>
             </a>
-            <a href="http://www.topmonks.com/team/">Current Work</a>
+            <!--<a xxxxxxhref="http://www.topmonks.com/team/">Current Work</a>-->
             <a href="https://twitter.com/DavidVotrubec">
                 <i class="fa fa-twitter"></i>
                 <span class="text">Twitter</span>
